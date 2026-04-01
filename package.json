@@ -62,19 +62,7 @@
     "vite": "^5.4.10"
   },
   "overrides": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-swipeable-views": {
-      "react": "^18.3.1",
-      "react-dom": "^18.3.1"
-    },
-    "@mui/material": {
-      "react": "^18.3.1",
-      "react-dom": "^18.3.1"
-    },
-    "@mui/icons-material": {
-      "react": "^18.3.1",
-      "react-dom": "^18.3.1"
-    }
+    "react": "$react",
+    "react-dom": "$react-dom"
   }
 }
