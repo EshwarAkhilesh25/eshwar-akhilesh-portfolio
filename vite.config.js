@@ -16,16 +16,6 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: true,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          ui: ['@headlessui/react', 'lucide-react'],
-          animations: ['framer-motion', 'gsap'],
-          lottie: ['@lottiefiles/dotlottie-react']
-        }
-      }
-    }
   },
   server: {
     host: true,
