@@ -1,0 +1,75 @@
+[
+  {
+    "id": "0",
+    "Title": "Multiplayer TicTacToe with Nakama Backend",
+    "Description": "A real-time, multiplayer Tic-Tac-Toe game built with React + TypeScript on the frontend and Nakama (open-source game server) on the backend. Supports Classic and Timed game modes, a global leaderboard, persistent player stats, and concurrent match sessions with authoritative server-side game logic.",
+    "Link": "https://github.com/EshwarAkhilesh25/multiplayer-tictactoe-nakama",
+    "LiveDemo": "https://multiplayer-tictactoe-nakama-2y9qbhkt5.vercel.app/",
+    "Img": "/projects/tictactoe.png",
+    "TechStack": ["React 18", "TypeScript", "Node.js", "Nakama Game Server", "WebSocket", "Docker", "Vercel", "Cloudflare Tunnel", "TailwindCSS"],
+    "KeyFeatures": [
+      "Real-time multiplayer with WebSocket communication",
+      "Authoritative server-side game logic (anti-cheat)",
+      "Classic & Timed game modes (30s/turn)",
+      "Global leaderboard with persistent player stats",
+      "Concurrent match sessions (multiple games simultaneously)",
+      "Auto-forfeit on disconnect/timeout",
+      "Player reconnection support",
+      "Unique Player ID system with display names",
+      "HTTPS/WSS secure production deployment",
+      "Nakama admin console for real-time monitoring"
+    ],
+    "Category": "Full-Stack",
+    "Company": "Personal Project"
+  },
+  {
+    "id": "1",
+    "Title": "Volumetric 3D Lung Nodule Detection",
+    "Description": "Deep learning system for early lung cancer detection from CT scans using 3D volumetric data. Implements state-of-the-art architectures with 96.7% recall rate, featuring preprocessing, augmentation, and comprehensive evaluation metrics.",
+    "Link": "https://github.com/EshwarAkhilesh25/Volumetric-3D-Lung-Nodule-Detection",
+    "Img": "/projects/lung-nodule.png",
+    "TechStack": ["Python", "TensorFlow", "PyTorch", "DICOM", "NIfTI", "OpenCV", "Medical Imaging", "Transformers", "ML Pipelines"],
+    "Category": "AI/ML",
+    "Company": "Academic Project"
+  },
+  {
+    "id": "2",
+    "Title": "Cervical Spine Fracture Detection",
+    "Description": "Advanced fracture detection system using Deformable DETR Transformers for improved accuracy in CT scan analysis. Implements deformable attention mechanisms for better localization and classification of cervical spine fractures.",
+    "Link": "https://github.com/EshwarAkhilesh25/Deformable-DETR",
+    "Img": "/projects/spine-fracture.png",
+    "TechStack": ["Python", "PyTorch", "DETR", "Transformers", "Medical Imaging", "COCO Dataset", "Data Preprocessing"],
+    "Category": "AI/ML",
+    "Company": "Academic Project"
+  },
+  {
+    "id": "3",
+    "Title": "Rule Engine",
+    "Description": "Dynamic rule evaluation system using Abstract Syntax Tree (AST) for complex conditional logic. Features REST APIs for rule creation, evaluation, and combination with MongoDB persistence and optimized rule merging.",
+    "Link": "https://github.com/EshwarAkhilesh25/Rule-Engine",
+    "Img": "/projects/rule-engine.png",
+    "TechStack": ["Node.js", "Express.js", "MongoDB", "AST", "REST APIs", "JavaScript", "API Integration"],
+    "Category": "Backend",
+    "Company": "Personal Project"
+  },
+  {
+    "id": "4",
+    "Title": "Weather Master",
+    "Description": "Full-stack weather monitoring application providing real-time and historical weather data for Indian cities. Features interactive charts, automatic data updates via cron jobs, and threshold-based weather alerts.",
+    "Link": "https://github.com/EshwarAkhilesh25/Weather-Master",
+    "Img": "/projects/weather-master.png",
+    "TechStack": ["Next.js", "Express.js", "MongoDB", "OpenWeatherMap API", "Chart.js", "Cron Jobs", "Responsive UI Development"],
+    "Category": "Full-Stack",
+    "Company": "Personal Project"
+  },
+  {
+    "id": "5",
+    "Title": "Responsive Portfolio Website",
+    "Description": "Modern portfolio website built with React.js and Tailwind CSS featuring responsive design, reusable components, and clean UI. Showcases skills and projects effectively with mobile-first approach and smooth animations.",
+    "Link": "https://github.com/EshwarAkhilesh25/portfolio-website",
+    "Img": "/projects/portfolio-site.png",
+    "TechStack": ["React.js", "Tailwind CSS", "JavaScript", "Responsive Design", "AOS Animations", "Figma-to-UI Implementation"],
+    "Category": "Frontend",
+    "Company": "Personal Project"
+  }
+]
