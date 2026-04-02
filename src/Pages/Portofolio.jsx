@@ -260,7 +260,7 @@ const InternshipCard = memo(({ company, role, duration, location, type, descript
       <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
       <div className="relative bg-gray-900/80 backdrop-blur-xl rounded-2xl p-4 sm:p-6 border border-white/10 hover:border-white/20 transition-all duration-300 w-full">
         {/* Header */}
-        <div className="flex items-start justify-between mb-4">
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4 gap-2">
           <div className="flex items-center gap-4">
             <div className={`w-14 h-14 rounded-xl flex items-center justify-center bg-gradient-to-br ${color} p-3`}>
               <Icon className="w-7 h-7 text-white" />
@@ -273,7 +273,7 @@ const InternshipCard = memo(({ company, role, duration, location, type, descript
             </div>
           </div>
           <div className="text-right">
-            <span className="sm:px-5 sm:py-1.5 px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-medium rounded-full border border-indigo-500/30 whitespace-nowrap sm:min-w-[140px] w-full sm:w-auto text-center">
+            <span className="sm:px-5 sm:py-1.5 px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-medium rounded-full border border-indigo-500/30 sm:whitespace-nowrap sm:min-w-[140px] w-fit sm:w-auto text-center">
               {type}
             </span>
           </div>
