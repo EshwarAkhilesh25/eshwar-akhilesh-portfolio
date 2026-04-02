@@ -252,13 +252,13 @@ const InternshipCard = memo(({ company, role, duration, location, type, descript
   
   return (
     <div
-      className="relative group"
+      className="relative group w-full sm:w-auto sm:max-w-4xl mx-auto"
       data-aos="fade-up"
       data-aos-duration="1000"
       data-aos-delay={delay}
     >
       <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
-      <div className="relative bg-gray-900/80 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
+      <div className="relative bg-gray-900/80 backdrop-blur-xl rounded-2xl p-4 sm:p-6 border border-white/10 hover:border-white/20 transition-all duration-300 w-full">
         {/* Header */}
         <div className="flex items-start justify-between mb-4">
           <div className="flex items-center gap-4">
@@ -273,7 +273,7 @@ const InternshipCard = memo(({ company, role, duration, location, type, descript
             </div>
           </div>
           <div className="text-right">
-            <span className="px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-medium rounded-full border border-indigo-500/30">
+            <span className="sm:px-5 sm:py-1.5 px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-medium rounded-full border border-indigo-500/30 whitespace-nowrap sm:min-w-[140px] w-full sm:w-auto text-center">
               {type}
             </span>
           </div>
@@ -638,18 +638,18 @@ export default function Portofolio() {
           onChangeIndex={setValue}
         >
           <TabPanel value={value} index={0} dir={theme.direction}>
-            <div className="h-auto pb-[10%] text-white overflow-hidden px-[5%] sm:px-[5%] lg:px-[10%] mt-10" id="Internships">
+            <div className="h-auto pb-[8%] text-white overflow-hidden px-3 sm:px-5 lg:px-[10%] mt-6 sm:mt-8" id="Internships">
               {/* Header */}
-              <div className="text-center lg:mb-12 mb-8">
+              <div className="text-center lg:mb-10 mb-6">
                 <h2
-                  className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]"
+                  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]"
                   data-aos="zoom-in-up"
                   data-aos-duration="600"
                 >
                   Professional Experience
                 </h2>
                 <p
-                  className="mt-4 text-gray-400 max-w-3xl mx-auto text-lg"
+                  className="mt-3 text-gray-400 max-w-none sm:max-w-xl md:max-w-2xl mx-auto text-xs sm:text-sm md:text-base px-3 sm:px-0"
                   data-aos="zoom-in-up"
                   data-aos-duration="800"
                 >
@@ -658,7 +658,7 @@ export default function Portofolio() {
               </div>
 
               {/* Internship Cards */}
-              <div className="max-w-4xl mx-auto space-y-6">
+              <div className="w-full sm:max-w-4xl sm:mx-auto space-y-6">
                 {internships.map((internship, index) => (
                   <InternshipCard key={index} {...internship} />
                 ))}

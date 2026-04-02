@@ -170,7 +170,7 @@ const Home = () => {
           isLoaded ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div className="container mx-auto px-1 sm:px-3 lg:px-5 max-w-5xl xl:max-w-6xl 2xl:max-w-7xl pt-4 sm:pt-6 lg:pt-8">
+        <div className="container mx-auto px-1 sm:px-3 lg:px-5 max-w-5xl xl:max-w-6xl 2xl:max-w-7xl pt-12 sm:pt-12 lg:pt-8">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-12 min-h-screen lg:min-h-[80vh] py-2 lg:py-4 overflow-x-hidden">
             {/* Left Column */}
             <div

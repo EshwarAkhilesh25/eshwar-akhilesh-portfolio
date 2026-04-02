@@ -1,5 +1,6 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import "./index.css";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
@@ -10,7 +11,6 @@ import Portofolio from "./Pages/Portofolio";
 import ContactPage from "./Pages/Contact";
 import ProjectDetails from "./components/ProjectDetail";
 import WelcomeScreen from "./Pages/WelcomeScreen";
-import { AnimatePresence } from 'framer-motion';
 
 const LandingPage = ({ showWelcome, setShowWelcome }) => {
   return (
@@ -32,12 +32,8 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
           <footer>
             <center>
               <hr className="my-3 border-gray-400 opacity-15 sm:mx-auto lg:my-6 text-center" />
-              <span className="block text-sm pb-4 text-gray-500 text-center dark:text-gray-400">
-                © 2025{" "}
-                <a href="https://www.linkedin.com/in/eshwar-akhilesh-battula-3969b4252" className="hover:underline">
-                  Eshwar Akhilesh™
-                </a>
-                . All Rights Reserved.
+              <span className="inline-block text-sm pb-4 text-indigo-400 font-semibold animate-pulse hover:scale-105 hover:text-purple-400 transition-all duration-300">
+                Code, Create, Innovate
               </span>
             </center>
           </footer>
@@ -69,12 +65,12 @@ function App() {
   const [showWelcome, setShowWelcome] = useState(false);
 
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
         <Route path="/" element={<LandingPage showWelcome={showWelcome} setShowWelcome={setShowWelcome} />} />
         <Route path="/project/:id" element={<ProjectPageLayout />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 

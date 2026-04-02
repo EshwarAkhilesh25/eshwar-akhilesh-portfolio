@@ -83,7 +83,7 @@ const Navbar = () => {
                     <a
                         href="#Home"
                         onClick={(e) => scrollToSection(e, "#Home")}
-                        className="text-xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent"
+                        className="text-sm sm:text-base md:text-lg lg:text-xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent"
                     >
                        Battula Eshwar Akhilesh Chowdary
                     </a>
@@ -124,14 +124,14 @@ const Navbar = () => {
                 <div className="md:hidden">
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className={`relative p-2 text-[#e2d3fd] hover:text-white transition-transform duration-300 ease-in-out transform ${
-                            isOpen ? "rotate-90 scale-125" : "rotate-0 scale-100"
+                        className={`relative p-2.5 text-white bg-gradient-to-r from-indigo-500/80 to-purple-500/80 backdrop-blur-md rounded-lg transition-all duration-300 ease-in-out transform border border-white/25 shadow-lg shadow-purple-500/20 ${
+                            isOpen ? "rotate-90 scale-110" : "rotate-0 scale-100 hover:scale-105"
                         }`}
                     >
                         {isOpen ? (
-                            <X className="w-6 h-6" />
+                            <X className="w-5 h-5" />
                         ) : (
-                            <Menu className="w-6 h-6" />
+                            <Menu className="w-5 h-5" />
                         )}
                     </button>
                 </div>
@@ -140,12 +140,11 @@ const Navbar = () => {
     
         {/* Mobile Menu Overlay */}
         <div
-            className={`md:hidden h-2/5 fixed inset-0 bg-[#030014] transition-all duration-300 ease-in-out ${
+            className={`md:hidden h-1/2 fixed inset-x-0 top-16 bg-gradient-to-b from-[#030014]/98 via-[#030014]/95 to-[#030014]/90 backdrop-blur-2xl transition-all duration-300 ease-in-out border-t border-white/20 shadow-2xl shadow-black/50 ${
                 isOpen
                     ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-[-100%] pointer-events-none"
+                    : "opacity-0 -translate-y-full pointer-events-none"
             }`}
-            style={{ top: "64px" }}
         >
             <div className="flex flex-col h-full">
                 <div className="px-4 py-6 space-y-4 flex-1 ">
