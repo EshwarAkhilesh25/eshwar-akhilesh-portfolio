@@ -94,7 +94,7 @@ const AboutPage = () => {
 
   return (
     <div
-      className="h-auto py-12 sm:py-16 md:py-20 lg:py-24 text-white overflow-hidden px-[5%] sm:px-[5%] lg:px-[10%]"
+      className="h-auto pt-4 pb-12 sm:py-16 md:py-20 lg:py-24 text-white overflow-hidden px-[5%] sm:px-[5%] lg:px-[10%]"
       id="About"
     >
       <Header />

@@ -25,6 +25,7 @@ const internships = [
     duration: "Current",
     location: "Bengaluru, India",
     type: "Healthcare Tech",
+    logo: "/Pharmeasy.jpeg",
     icon: Stethoscope,
     color: "from-green-500 to-emerald-600",
     users: "25M+",
@@ -95,6 +96,7 @@ const internships = [
     duration: "2025",
     location: "Bengaluru, India",
     type: "AI/NLP & Automation",
+    logo: "/NityoInfotech.svg",
     icon: Brain,
     color: "from-blue-500 to-cyan-600",
     users: "500K+",
@@ -160,11 +162,12 @@ const internships = [
     delay: "200"
   },
   {
-    company: "Pegasystems",
+    company: "Eclantiqx",
     role: "Pega Intern",
     duration: "2024",
     location: "Hyderabad, India",
     type: "Enterprise BPM",
+    logo: "/Eclantiqx.png",
     icon: Building,
     color: "from-green-500 to-teal-600",
     users: "100K+",
@@ -247,7 +250,7 @@ const ProjectDetails = memo(({ projects, isOpen, toggleOpen }) => (
 ));
 
 // Internship Card Component
-const InternshipCard = memo(({ company, role, duration, location, type, description, achievements, technologies, icon: Icon, color, users, stats, delay, projects }) => {
+const InternshipCard = memo(({ company, role, duration, location, type, logo, description, achievements, technologies, icon: Icon, color, users, stats, delay, projects }) => {
   const [isProjectsOpen, setIsProjectsOpen] = useState(false);
   
   return (
@@ -262,8 +265,17 @@ const InternshipCard = memo(({ company, role, duration, location, type, descript
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4 gap-2">
           <div className="flex items-center gap-4">
-            <div className={`w-14 h-14 rounded-xl flex items-center justify-center bg-gradient-to-br ${color} p-3`}>
-              <Icon className="w-7 h-7 text-white" />
+            <div className="w-14 h-14 rounded-xl flex items-center justify-center overflow-hidden bg-white/10">
+              <img 
+                src={logo} 
+                alt={`${company} logo`} 
+                className="w-full h-full object-contain"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'flex';
+                }}
+              />
+              <Icon className="w-7 h-7 text-white" style={{ display: 'none' }} />
             </div>
             <div>
               <h3 className="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:to-purple-400 transition-all duration-300">
@@ -485,6 +497,19 @@ export default function Portofolio() {
       setValue(0); // Internships tab is index 0
     }
   }, [searchParams]);
+
+  // Check for portfolio tab in sessionStorage (for back navigation)
+  useEffect(() => {
+    const tab = sessionStorage.getItem('portfolioTab');
+    if (tab !== null) {
+      setValue(Number(tab));
+      sessionStorage.removeItem('portfolioTab');
+      // scroll into view
+      setTimeout(() => {
+        document.getElementById('Portofolio')?.scrollIntoView({ behavior: 'smooth' });
+      }, 300);
+    }
+  }, []);
   const [projects, setProjects] = useState([]);
   const [showAllProjects, setShowAllProjects] = useState(false);
   const isMobile = window.innerWidth < 768;

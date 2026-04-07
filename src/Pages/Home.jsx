@@ -171,7 +171,7 @@ const Home = () => {
         }`}
       >
         <div className="container mx-auto px-1 sm:px-3 lg:px-5 max-w-5xl xl:max-w-6xl 2xl:max-w-7xl pt-12 sm:pt-12 lg:pt-8">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-12 min-h-screen lg:min-h-[80vh] py-2 lg:py-4 overflow-x-hidden">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-12 min-h-0 lg:min-h-[80vh] py-2 lg:py-4 overflow-x-hidden">
             {/* Left Column */}
             <div
               className="w-full lg:w-1/2 space-y-2 sm:space-y-3 lg:space-y-4 text-left order-1 lg:order-1 px-0 sm:px-0 overflow-x-hidden"
@@ -242,7 +242,7 @@ const Home = () => {
 
             {/* Right Column - Optimized Lottie Animation */}
             <div
-              className="w-full py-2 sm:py-0 lg:w-1/2 h-auto lg:h-[400px] xl:h-[500px] relative flex items-center justify-center order-2 lg:order-2 mt-2 lg:mt-0 px-2 sm:px-0"
+              className="hidden sm:flex w-full lg:w-1/2 h-auto lg:h-[400px] xl:h-[500px] relative items-center justify-center order-2 lg:order-2 mt-2 lg:mt-0 px-2 sm:px-0"
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
               data-aos="fade-left"
@@ -278,7 +278,7 @@ const Home = () => {
             </div>
 
             {/* Stats Section Below Animation */}
-            <div className="w-full lg:w-1/2 order-3 lg:order-3 mt-16 lg:mt-4 lg:pl-8 px-4 sm:px-6 lg:px-0">
+            <div className="w-full lg:w-1/2 order-3 lg:order-3 mt-4 lg:mt-4 lg:pl-8 px-4 sm:px-6 lg:px-0">
               <div className="space-y-4 sm:space-y-6">
                 {/* Quick Stats */}
                 <div
